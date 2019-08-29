@@ -360,8 +360,8 @@ nav a, nav a:visited {
 
 .flipbook-viewport .my-container{
 	position:absolute;
-	top:50%;
-	left:50%;
+	top: 10%;
+    	left: 10%;
 	margin:auto;
 }
 
