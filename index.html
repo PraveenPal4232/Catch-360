@@ -107,7 +107,8 @@
 
       .text {
         padding: 0 20px 20px 20px;
-		font-family: 'Quicksand', sans-serif;
+		    font-family: 'Quicksand', sans-serif;
+        font-size: 1em;
       }
   
   #testAudio{
@@ -133,11 +134,34 @@
   </style>
 </head>
  <body>
-  
+   
+   
+   
+  <nav>
+      
+      <li style="float: left; position: absolute;"><img style="width:130px" src="https://raw.githubusercontent.com/piyushsinghwork/Hello-World/master/catch.png"></li>
+      <li class="item selected">Home</li>
+      <li class="item">About</li>
+      <li class="item">Products</li>
+      <li class="item">Games</li>
+      <li class="item">Mixology</li>
+      <li class="item">Events</li>
+      <li class="item">Stockists</li>
+      <li class="item">Hospitality</li>
+      <li class="item">Careers</li>
+      <li class="item">Contact</li>
+
+    </nav>
+
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
    
 <div id="container"></div>
 
-<div class="border"></div>
+ 
    
    <div class="audiobox">
       <audio id="testAudio" controls="controls" autoplay="autoplay" loop="loop">
@@ -223,6 +247,7 @@
    
  <script type="text/javascript" src="https://pchen66.github.io/js/three/three.min.js"></script>
  <script type="text/javascript" src="panolens.min.js"></script>
+ <script type="text/javascript" src="script.js"></script>
  
 <script type="text/javascript">
   
@@ -361,7 +386,7 @@ panorama4 = new PANOLENS.ImagePanorama( 'https://piyushsinghwork.github.io/Hello
 
 panorama5 = new PANOLENS.ImagePanorama( 'https://piyushsinghwork.github.io/Hello-World/pagain.jpg' );
 
-panorama6 = new PANOLENS.VideoPanorama( 'https://cdn.glitch.com/62ad42ff-7404-457f-87f5-6b322ec8d6aa%2FClashofClans.mp4?v=1566973000270',{ autoplay: true }  );
+panorama6 = new PANOLENS.ImagePanorama( 'https://piyushsinghwork.github.io/Hello-World/bar.jpg' );
 
 panorama7 = new PANOLENS.ImagePanorama( 'https://piyushsinghwork.github.io/Hello-World/p26-@1.jpg' );
 
@@ -371,7 +396,7 @@ panorama9 = new PANOLENS.ImagePanorama( 'https://piyushsinghwork.github.io/Hello
 
 panorama10 = new PANOLENS.ImagePanorama( 'https://piyushsinghwork.github.io/Hello-World/47.jpg' );
 
-panorama11 = new PANOLENS.ImagePanorama( 'https://piyushsinghwork.github.io/Hello-World/45.jpg' );
+panorama11 = new PANOLENS.ImagePanorama( 'https://raw.githubusercontent.com/piyushsinghwork/Hello-World/master/game.jpg' );
 
 panorama12 = new PANOLENS.ImagePanorama( 'https://piyushsinghwork.github.io/Hello-World/p6.jpg' );
 
@@ -390,9 +415,9 @@ panorama3.link( panorama12, new THREE.Vector3(3000, 0, 2500), 300, 'https://cdn.
 panorama3.link( panorama11, new THREE.Vector3(4000, 600, 0), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/left.png'  );
 panorama3.link( panorama2, new THREE.Vector3(-3000, -0, -2500), 300, 'https://cdn.glitch.com/6130ffe9-f7f2-4222-9f21-9ec64bfec53e%2Ftop.png?v=1566808114098'  );
 
-panorama4.link( panorama7, new THREE.Vector3(4500.48, -300.67, 3000), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/down.png'  );
-panorama4.link( panorama3, new THREE.Vector3(-4500.48, -100.67, -675.46), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/up.png'  );
-panorama4.link( panorama11, new THREE.Vector3(-4500.48, -300.67, -2500), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/up.png'  );
+panorama4.link( panorama7, new THREE.Vector3(4500.48, -300.67, 3000), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/down%20(1).png'  );
+panorama4.link( panorama3, new THREE.Vector3(-4500.48, -100.67, -675.46), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/left%20(1).png'  );
+panorama4.link( panorama11, new THREE.Vector3(-4500.48, -300.67, -2500), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/down%20(1).png'  );
 
 panorama5.link( panorama8, new THREE.Vector3(-4000, -200.67, 600), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/down.png'  );
 panorama5.link( panorama6, new THREE.Vector3(4000, 600.67, -2275.46), 300, 'https://raw.githubusercontent.com/vishal985/Hello-World/master/down.png'  );
@@ -425,7 +450,7 @@ panorama7.link( panorama4, new THREE.Vector3(-3700.48, -300, -4075.46), 300, 'ht
 
 panorama.add( infospot ); 
 
-viewer = new PANOLENS.Viewer( { container: container, output: 'console', autoRotate: true, autoRotateSpeed: .2, autoRotateActivationDuration: 5000 } );
+viewer = new PANOLENS.Viewer( { container: container, output: 'console', autoRotate: true, autoRotateSpeed: .3, autoRotateActivationDuration: 3000 } );
 viewer.add( panorama, panorama2, panorama3, panorama4, panorama5, panorama6, panorama7,  panorama8, panorama9, panorama10, panorama11,  panorama12, panorama_video, panorama_video2, panorama_video3 );
 
 // Cube custom item
@@ -477,7 +502,7 @@ var controlItemVideoGroup = {
   },
   
   group: 'video'
-};
+}; 
 viewer.appendControlItem(controlItemVideoGroup);
 
       infospot = new PANOLENS.Infospot( 400, PANOLENS.DataImage.Info );
@@ -524,14 +549,6 @@ viewer.appendControlItem(controlItemVideoGroup);
       infospot9.position.set(4000, -2500.67, 100);
       infospot9.addHoverElement( document.getElementById( 'beverages' ), 200 );
       panorama5.add( infospot9 );
-  
-    /*
-            
-  
-    */
-  
-  
-  
   
    </script>
  </body>
