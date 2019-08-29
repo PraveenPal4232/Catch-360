@@ -426,6 +426,8 @@ nav a, nav a:visited {
 	-ms-box-shadow:0 0 20px #ccc;
 	box-shadow:0 0 20px #ccc;
 }
-
+#book1{
+z-index:999;
+}
 
 /*  space for book box  */
